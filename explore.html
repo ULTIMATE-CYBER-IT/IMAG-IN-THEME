@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Explorer - IMAG'IN</title>
+        <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            :root {
+                --bs-primary: #F58D2A;
+                --bs-secondary: #3384D9;
+            }
+            .btn-primary {
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+            .btn-primary:hover {
+                background-color: #e57d1a;
+                border-color: #e57d1a;
+            }
+            .text-primary {
+                color: var(--bs-primary) !important;
+            }
+            .bg-primary {
+                background-color: var(--bs-primary) !important;
+            }
+            .btn-secondary {
+                background-color: var(--bs-secondary);
+                border-color: var(--bs-secondary);
+            }
+            .btn-secondary:hover {
+                background-color: #2b73c0;
+                border-color: #2b73c0;
+            }
+            .text-secondary {
+                color: var(--bs-secondary) !important;
+            }
+            .bg-secondary {
+                background-color: var(--bs-secondary) !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img alt="IMAG'IN" width="40" src="assets/img/logo/1%20png@4x.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex mx-auto" style="width: 50%;">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Rechercher des images...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/explore.html">Explorer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/photographers.html">Photographes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pricing.html">Tarifs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login.html">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sign-in.html" class="btn btn-primary">S'inscrire</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container-fluid py-4">
+            <div class="row">
+                <!-- Filters Sidebar -->
+                <div class="col-lg-3">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Filtres</h5>
+                            
+                            <!-- Categories -->
+                            <div class="mb-4">
+                                <h6>Catégories</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cat1">
+                                    <label class="form-check-label" for="cat1">Nature</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cat2">
+                                    <label class="form-check-label" for="cat2">Portrait</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cat3">
+                                    <label class="form-check-label" for="cat3">Architecture</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cat4">
+                                    <label class="form-check-label" for="cat4">Business</label>
+                                </div>
+                            </div>
+
+                            <!-- Price Range -->
+                            <div class="mb-4">
+                                <h6>Prix</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="price" id="price1">
+                                    <label class="form-check-label" for="price1">Tous les prix</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="price" id="price2">
+                                    <label class="form-check-label" for="price2">Gratuit</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="price" id="price3">
+                                    <label class="form-check-label" for="price3">Premium</label>
+                                </div>
+                            </div>
+
+                            <!-- Image Type -->
+                            <div class="mb-4">
+                                <h6>Type d'image</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="type1">
+                                    <label class="form-check-label" for="type1">Photos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="type2">
+                                    <label class="form-check-label" for="type2">Vecteurs</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="type3">
+                                    <label class="form-check-label" for="type3">Illustrations</label>
+                                </div>
+                            </div>
+
+                            <!-- Resolution -->
+                            <div class="mb-4">
+                                <h6>Résolution</h6>
+                                <select class="form-select">
+                                    <option selected>Toutes les résolutions</option>
+                                    <option>HD (1920x1080)</option>
+                                    <option>4K (3840x2160)</option>
+                                    <option>8K (7680x4320)</option>
+                                </select>
+                            </div>
+
+                            <button class="btn btn-primary w-100">Appliquer les filtres</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Images Grid -->
+                <div class="col-lg-9">
+                    <!-- Sort Options -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex gap-3">
+                            <select class="form-select">
+                                <option selected>Plus récent</option>
+                                <option>Plus populaire</option>
+                                <option>Prix croissant</option>
+                                <option>Prix décroissant</option>
+                            </select>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-outline-secondary active">
+                                    <i class="fas fa-th-large"></i>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                            <span class="text-muted">24 images trouvées</span>
+                        </div>
+                    </div>
+
+                    <!-- Images Grid -->
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <!-- Image Card -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80" alt="Image" class="card-img-top" style="height: 200px; object-fit: cover;">
+                                    <div class="position-absolute top-0 end-0 p-2">
+                                        <button class="btn btn-light btn-sm rounded-circle">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">Paysage de montagne</h6>
+                                    <p class="card-text small text-muted">Par <a href="#" class="text-decoration-none">John Doe</a></p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-primary">HD</span>
+                                        <button class="btn btn-sm btn-primary">
+                                            <i class="fas fa-download me-1"></i>Télécharger
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Image Card -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80" alt="Image" class="card-img-top" style="height: 200px; object-fit: cover;">
+                                    <div class="position-absolute top-0 end-0 p-2">
+                                        <button class="btn btn-light btn-sm rounded-circle">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">Lac de montagne</h6>
+                                    <p class="card-text small text-muted">Par <a href="#" class="text-decoration-none">Jane Smith</a></p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-primary">4K</span>
+                                        <button class="btn btn-sm btn-primary">
+                                            <i class="fas fa-download me-1"></i>Télécharger
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Image Card -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80" alt="Image" class="card-img-top" style="height: 200px; object-fit: cover;">
+                                    <div class="position-absolute top-0 end-0 p-2">
+                                        <button class="btn btn-light btn-sm rounded-circle">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">Forêt verdoyante</h6>
+                                    <p class="card-text small text-muted">Par <a href="#" class="text-decoration-none">Mike Johnson</a></p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-primary">HD</span>
+                                        <button class="btn btn-sm btn-primary">
+                                            <i class="fas fa-download me-1"></i>Télécharger
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Précédent</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Suivant</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 IMAG'IN. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href="/terms.html" class="text-light me-3">Conditions d'utilisation</a>
+                        <a href="/privacy.html" class="text-light">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html> 

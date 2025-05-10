@@ -1,72 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>IMAG-IN</title>
+        <title>IMAG'IN - Banque d'images professionnelle</title>
         <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            :root {
+                --bs-primary: #F58D2A;
+                --bs-secondary: #3384D9;
+            }
+            .btn-primary {
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+            .btn-primary:hover {
+                background-color: #e57d1a;
+                border-color: #e57d1a;
+            }
+            .text-primary {
+                color: var(--bs-primary) !important;
+            }
+            .bg-primary {
+                background-color: var(--bs-primary) !important;
+            }
+            .btn-secondary {
+                background-color: var(--bs-secondary);
+                border-color: var(--bs-secondary);
+            }
+            .btn-secondary:hover {
+                background-color: #2b73c0;
+                border-color: #2b73c0;
+            }
+            .text-secondary {
+                color: var(--bs-secondary) !important;
+            }
+            .bg-secondary {
+                background-color: var(--bs-secondary) !important;
+            }
+        </style>
     </head>
     <body>
         <!-- Header Navigation -->
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="/"> <img alt="IMAGIN" width="30" src="assets/img/logo/1%20png@4x.png"> </a>
-                <div>
-                    <a href="#" class="text-decoration-none text-muted me-3">Lorem ipsum</a>
-                    <a href="#" class="text-decoration-none text-muted me-3">Lorem ipsum</a>
-                    <a href="#" class="text-decoration-none text-muted me-3">Lorem ipsum</a>
-                    <a href="#" class="text-decoration-none text-muted">Lorem ipsum</a>
-                    <a href="/profile.html" class="ms-4"> <img src="https://ui-avatars.com/api/?name=a" alt="User" width="30"> </a>
+                <a class="navbar-brand" href="/">
+                    <img alt="IMAG'IN" width="40" src="assets/img/logo/1%20png@4x.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex mx-auto" style="width: 50%;">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Rechercher des images...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/explore.html">Explorer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/photographers.html">Photographes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pricing.html">Tarifs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login.html">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sign-in.html" class="btn btn-primary">S'inscrire</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
         <!-- Section principale -->
         <div class="container text-center my-5">
-            <h1 class="display-4">LOREM IPSUM DOLOR</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            <h1 class="display-4 fw-bold">Découvrez IMAG'IN</h1>
+            <p class="lead mb-5">La banque d'images professionnelle qui met en valeur le talent des photographes</p>
+            
+            <!-- Barre de recherche principale -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8">
+                    <div class="input-group input-group-lg">
+                        <input type="search" class="form-control" placeholder="Rechercher des images...">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fas fa-search"></i> Rechercher
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <small class="text-muted">Ex: nature, portrait, architecture, etc.</small>
+                    </div>
+                </div>
+            </div>
+
             <!-- Cards de tarifs -->
+            <h2 class="mb-4">Nos offres</h2>
             <div class="row justify-content-center my-5">
                 <div class="col-md-4">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Paiement à l'unité</h5>
-                            <p class="text-muted">Idéal pour les petits projets</p>
-                            <h3>XXX Fcfa/image</h3>
+                            <h5 class="card-title">Particulier</h5>
+                            <p class="text-muted">Idéal pour les projets personnels</p>
+                            <h3 class="text-primary">5 000 Fcfa/image</h3>
                             <button class="btn btn-primary">Commander</button>
                             <ul class="list-unstyled mt-3">
-                                <li>✔ Lorem ipsum dolor</li>
-                                <li>✔ Lorem ipsum dolor</li>
-                                <li>✔ Lorem ipsum dolor</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Images HD</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Usage personnel</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Support email</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm h-100 border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Professionnel</h5>
+                        </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title">Paiement à l'unité</h5>
-                            <p class="text-muted">Idéal pour les petits projets</p>
-                            <h3>XXX Fcfa/image</h3>
-                            <button class="btn btn-warning">Commander</button>
+                            <p class="text-muted">Pour les entreprises et créateurs</p>
+                            <h3 class="text-primary">3 500 Fcfa/image</h3>
+                            <button class="btn btn-primary">Commander</button>
                             <ul class="list-unstyled mt-3">
-                                <li>✔ Lorem ipsum dolor</li>
-                                <li>✔ Lorem ipsum dolor</li>
-                                <li>✔ Lorem ipsum dolor</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Images 4K</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Usage commercial</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Support prioritaire</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Licence étendue</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Paiement à l'unité</h5>
-                            <p class="text-muted">Idéal pour les petits projets</p>
-                            <h3>XXX Fcfa/image</h3>
-                            <button class="btn btn-primary">Commander</button>
+                            <h5 class="card-title">Photographe</h5>
+                            <p class="text-muted">Partagez vos créations</p>
+                            <h3 class="text-primary">70% des revenus</h3>
+                            <button class="btn btn-primary">Devenir photographe</button>
                             <ul class="list-unstyled mt-3">
-                                <li>✔ Lorem ipsum dolor</li>
-                                <li>✔ Lorem ipsum dolor</li>
-                                <li>✔ Lorem ipsum dolor</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Plateforme dédiée</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Statistiques détaillées</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Paiement sécurisé</li>
                             </ul>
                         </div>
                     </div>
@@ -75,49 +155,77 @@
         </div>
         <!-- Section de confiance -->
         <div class="container text-center my-5">
-            <h2>Faites nous <span class="text-primary">confiance</span></h2>
+            <h2>Pourquoi nous <span class="text-primary">faire confiance</span></h2>
             <div class="row my-4">
                 <div class="col-md-3">
-                    <div class="text-center"><span class="border border-primary rounded-circle p-3">Icon</span>
-                        <h5 class="mt-3">Lorem ipsum</h5>
-                        <p>Lorem ipsum dolor sit consectetur adipiscing</p>
+                    <div class="text-center">
+                        <i class="fas fa-camera-retro fa-3x text-primary mb-3"></i>
+                        <h5 class="mt-3">Qualité Premium</h5>
+                        <p>Images sélectionnées par des experts</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="text-center"><span class="border border-warning rounded-circle p-3">Icon</span>
-                        <h5 class="mt-3">Lorem ipsum</h5>
-                        <p>Lorem ipsum dolor sit consectetur adipiscing</p>
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h5 class="mt-3">Licences Sécurisées</h5>
+                        <p>Utilisation légale garantie</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="text-center"><span class="border border-warning rounded-circle p-3">Icon</span>
-                        <h5 class="mt-3">Lorem ipsum</h5>
-                        <p>Lorem ipsum dolor sit consectetur adipiscing</p>
+                    <div class="text-center">
+                        <i class="fas fa-bolt fa-3x text-primary mb-3"></i>
+                        <h5 class="mt-3">Téléchargement Rapide</h5>
+                        <p>Accès instantané aux images</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="text-center"><span class="border border-primary rounded-circle p-3">Icon</span>
-                        <h5 class="mt-3">Lorem ipsum</h5>
-                        <p>Lorem ipsum dolor sit consectetur adipiscing</p>
+                    <div class="text-center">
+                        <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                        <h5 class="mt-3">Support 24/7</h5>
+                        <p>Une équipe à votre écoute</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Section Photographes -->
+        <div class="bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2>Devenez <span class="text-primary">photographe</span></h2>
+                        <p class="lead">Partagez votre talent et gagnez de l'argent</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Gagnez jusqu'à 70% sur chaque vente</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Statistiques détaillées de vos ventes</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Paiement sécurisé et régulier</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Plateforme dédiée aux photographes</li>
+                        </ul>
+                        <a href="/photographer-signup.html" class="btn btn-primary btn-lg">Rejoindre les photographes</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80" alt="Photographe" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Section des partenaires -->
         <div class="container text-center my-5">
             <h2>Nos <span class="text-primary">partenaires</span></h2>
-            <div class="row my-4">
+            <p class="lead mb-4">Ils nous font confiance pour leurs besoins en images</p>
+            <div class="row my-4 align-items-center">
                 <div class="col-md-3">
-                    <div class="border bg-light" style="height: 100px; width: 100px; margin: auto;">Logo</div>
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80" alt="Partenaire 1" class="img-fluid" style="max-height: 60px; object-fit: contain;">
                 </div>
                 <div class="col-md-3">
-                    <div class="border bg-light" style="height: 100px; width: 100px; margin: auto;">Logo</div>
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80" alt="Partenaire 2" class="img-fluid" style="max-height: 60px; object-fit: contain;">
                 </div>
                 <div class="col-md-3">
-                    <div class="border bg-light" style="height: 100px; width: 100px; margin: auto;">Logo</div>
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80" alt="Partenaire 3" class="img-fluid" style="max-height: 60px; object-fit: contain;">
                 </div>
                 <div class="col-md-3">
-                    <div class="border bg-light" style="height: 100px; width: 100px; margin: auto;">Logo</div>
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80" alt="Partenaire 4" class="img-fluid" style="max-height: 60px; object-fit: contain;">
                 </div>
             </div>
         </div>
@@ -126,37 +234,91 @@
             <h2 class="text-center">Questions <span class="text-primary">fréquentes</span></h2>
             <div class="accordion mt-4" id="faqAccordion">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                            Question 1
-</button> </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Comment fonctionne la licence d'utilisation ?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Réponse à la question 1.
-</div>
+                            Nos licences sont simples et transparentes. L'achat d'une image vous donne le droit de l'utiliser selon les termes de la licence choisie. La licence standard couvre l'usage personnel et commercial, avec quelques restrictions. Pour plus de détails, consultez notre <a href="/licenses.html">page des licences</a>.
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                            Question 2
-</button> </h2>
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Comment devenir photographe sur IMAG'IN ?
+                        </button>
+                    </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Réponse à la question 2.
-</div>
+                            Pour devenir photographe, créez un compte photographe, soumettez vos images pour validation, et commencez à gagner de l'argent. Nous offrons 70% des revenus sur chaque vente. Consultez notre <a href="/photographer-guide.html">guide du photographe</a> pour plus d'informations.
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                            Question 3
-</button> </h2>
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Quels sont les formats d'images disponibles ?
+                        </button>
+                    </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Réponse à la question 3.
-</div>
+                            Nous proposons des images en haute résolution (HD et 4K) dans les formats JPG et PNG. Les images sont optimisées pour une utilisation web et print. Vous pouvez télécharger les images dans le format qui vous convient le mieux.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/img/logo/1%20png@4x.png" alt="IMAG'IN" width="120" class="mb-3">
+                        <p>La banque d'images professionnelle qui met en valeur le talent des photographes.</p>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>Navigation</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="/" class="text-light">Accueil</a></li>
+                            <li><a href="/explore.html" class="text-light">Explorer</a></li>
+                            <li><a href="/photographers.html" class="text-light">Photographes</a></li>
+                            <li><a href="/pricing.html" class="text-light">Tarifs</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>Légal</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="/terms.html" class="text-light">Conditions d'utilisation</a></li>
+                            <li><a href="/privacy.html" class="text-light">Politique de confidentialité</a></li>
+                            <li><a href="/licenses.html" class="text-light">Licences</a></li>
+                            <li><a href="/cookies.html" class="text-light">Cookies</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contact</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-envelope me-2"></i> contact@imagin.com</li>
+                            <li><i class="fas fa-phone me-2"></i> +225 07 07 07 07 07</li>
+                            <li class="mt-3">
+                                <a href="#" class="text-light me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="text-center">
+                    <small>&copy; 2024 IMAG'IN. Tous droits réservés.</small>
+                </div>
+            </div>
+        </footer>
+
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>

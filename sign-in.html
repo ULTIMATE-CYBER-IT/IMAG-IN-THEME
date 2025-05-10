@@ -1,66 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Page de création de compte</title>
+        <title>Création de compte - IMAG'IN</title>
         <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="assets/css/sign-in.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            :root {
+                --bs-primary: #F58D2A;
+                --bs-secondary: #3384D9;
+            }
+            .btn-primary {
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+            .btn-primary:hover {
+                background-color: #e57d1a;
+                border-color: #e57d1a;
+            }
+            .text-primary {
+                color: var(--bs-primary) !important;
+            }
+            .bg-primary {
+                background-color: var(--bs-primary) !important;
+            }
+            .btn-secondary {
+                background-color: var(--bs-secondary);
+                border-color: var(--bs-secondary);
+            }
+            .btn-secondary:hover {
+                background-color: #2b73c0;
+                border-color: #2b73c0;
+            }
+            .text-secondary {
+                color: var(--bs-secondary) !important;
+            }
+            .bg-secondary {
+                background-color: var(--bs-secondary) !important;
+            }
+            .left-section {
+                background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+                position: relative;
+                overflow: hidden;
+            }
+            .left-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80') center/cover;
+                opacity: 0.1;
+            }
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1rem;
+                transition: transform 0.3s ease;
+            }
+            .feature-icon:hover {
+                transform: scale(1.1);
+            }
+            .form-container {
+                transition: transform 0.3s ease;
+            }
+            .form-container:hover {
+                transform: translateY(-5px);
+            }
+            .input-group-text {
+                background-color: #f8f9fa;
+                border-right: none;
+            }
+            .form-control {
+                border-left: none;
+            }
+            .form-control:focus {
+                box-shadow: none;
+                border-color: #ced4da;
+            }
+            .social-btn {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+            .social-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+        </style>
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row min-vh-100">
                 <!-- Section de gauche -->
                 <div class="col-md-6 left-section d-flex flex-column justify-content-center align-items-center text-white">
-                    <h1 class="display-5">LOREM IPSUM DOLOR</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    <div class="text-center px-4 position-relative">
+                        <h1 class="display-4 fw-bold mb-4 text-white">Rejoignez IMAG'IN</h1>
+                        <p class="lead mb-5 text-white-75">Créez votre compte et accédez à des milliers d'images de qualité</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="text-center">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-images fa-2x"></i>
+                                    </div>
+                                    <h5 class="text-white">Images Premium</h5>
+                                    <p class="small text-white-75">Accès à notre catalogue</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-center">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-download fa-2x"></i>
+                                    </div>
+                                    <h5 class="text-white">Téléchargements illimités</h5>
+                                    <p class="small text-white-75">Selon votre forfait</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Section de droite avec le formulaire -->
-                <div class="col-md-6 d-flex justify-content-center align-items-center">
-                    <div class="form-container bg-white p-5 my-4 shadow">
-                        <div class="text-center mb-4"><a href="/"><img src="assets/img/logo/1%20png@4x.png" alt="Logo Imagin" class="img-fluid mb-1" style="width: 75px;"></a>
-                            <h2>Créez un compte</h2>
+                <div class="col-md-6 d-flex justify-content-center align-items-center bg-light">
+                    <div class="form-container bg-white p-5 my-4 shadow rounded-3" style="max-width: 500px; width: 100%;">
+                        <div class="text-center mb-4">
+                            <a href="/">
+                                <img src="assets/img/logo/1%20png@4x.png" alt="Logo IMAG'IN" class="img-fluid mb-3" style="width: 100px;">
+                            </a>
+                            <h2 class="h3">Créez votre compte</h2>
+                            <p class="text-muted">Rejoignez notre communauté de photographes et utilisateurs</p>
                         </div>
                         <form>
                             <div class="row mb-3">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Nom" required="">
+                                    <label for="lastname" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="lastname" placeholder="Votre nom" required>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Prénom" required="">
+                                    <label for="firstname" class="form-label">Prénom</label>
+                                    <input type="text" class="form-control" id="firstname" placeholder="Votre prénom" required>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <select class="form-select" required="">
-                                    <option selected="">Type de compagnie</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
+                                <label for="companyType" class="form-label">Type de compte</label>
+                                <select class="form-select" id="companyType" required>
+                                    <option value="">Sélectionnez un type</option>
+                                    <option value="particulier">Particulier</option>
+                                    <option value="professionnel">Professionnel</option>
+                                    <option value="photographe">Photographe</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Nom de la compagnie" required="">
+                                <label for="company" class="form-label">Nom de l'entreprise</label>
+                                <input type="text" class="form-control" id="company" placeholder="Nom de votre entreprise">
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email" required="">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    <input type="email" class="form-control" id="email" placeholder="votre@email.com" required>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <input type="tel" class="form-control" placeholder="Téléphone" required="">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Votre numéro de téléphone" required>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control" placeholder="Mot de passe" required="">
+                                <label for="password" class="form-label">Mot de passe</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password" placeholder="Créez un mot de passe" required>
+                                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="text-decoration-none">Mot de passe oublié ?</a>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Lorem ipsum</button>
-                            <div class="text-center mt-3">
-                                <small>Pas de compte ? <a href="#" class="text-decoration-none">Créer un compte</a></small>
+                            <button type="submit" class="btn btn-primary w-100 mb-3">Créer mon compte</button>
+                            <div class="text-center">
+                                <p class="mb-0">Déjà un compte ? <a href="/login.html" class="text-decoration-none">Se connecter</a></p>
                             </div>
                         </form>
+                        <hr class="my-4">
+                        <div class="text-center">
+                            <p class="text-muted mb-3">Ou inscrivez-vous avec</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#" class="btn btn-outline-dark social-btn"><i class="fab fa-google"></i></a>
+                                <a href="#" class="btn btn-outline-dark social-btn"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-outline-dark social-btn"><i class="fab fa-apple"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            // Toggle password visibility
+            document.getElementById('togglePassword').addEventListener('click', function() {
+                const password = document.getElementById('password');
+                const icon = this.querySelector('i');
+                if (password.type === 'password') {
+                    password.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    password.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        </script>
     </body>
 </html>

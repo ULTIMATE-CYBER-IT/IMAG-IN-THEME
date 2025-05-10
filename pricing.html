@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Tarifs - IMAG'IN</title>
+        <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            :root {
+                --bs-primary: #F58D2A;
+                --bs-secondary: #3384D9;
+            }
+            .btn-primary {
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+            .btn-primary:hover {
+                background-color: #e57d1a;
+                border-color: #e57d1a;
+            }
+            .text-primary {
+                color: var(--bs-primary) !important;
+            }
+            .bg-primary {
+                background-color: var(--bs-primary) !important;
+            }
+            .btn-secondary {
+                background-color: var(--bs-secondary);
+                border-color: var(--bs-secondary);
+            }
+            .btn-secondary:hover {
+                background-color: #2b73c0;
+                border-color: #2b73c0;
+            }
+            .text-secondary {
+                color: var(--bs-secondary) !important;
+            }
+            .bg-secondary {
+                background-color: var(--bs-secondary) !important;
+            }
+            .pricing-card {
+                transition: transform 0.3s ease;
+            }
+            .pricing-card:hover {
+                transform: translateY(-10px);
+            }
+            .popular-badge {
+                position: absolute;
+                top: -12px;
+                right: 20px;
+                background-color: var(--bs-primary);
+                color: white;
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img alt="IMAG'IN" width="40" src="assets/img/logo/1%20png@4x.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex mx-auto" style="width: 50%;">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Rechercher des images...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/explore.html">Explorer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/photographers.html">Photographes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/pricing.html">Tarifs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login.html">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sign-in.html" class="btn btn-primary">S'inscrire</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold mb-4">Des tarifs adaptés à vos besoins</h1>
+                    <p class="lead mb-4">Choisissez l'offre qui correspond le mieux à votre utilisation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <div class="container py-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Particulier Card -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm pricing-card">
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-center mb-4">Particulier</h3>
+                            <div class="text-center mb-4">
+                                <span class="display-4 fw-bold">5 000</span>
+                                <span class="text-muted">Fcfa</span>
+                                <p class="text-muted">par image</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Images en HD
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Usage personnel
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Support par email
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Téléchargement illimité
+                                </li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="/sign-in.html" class="btn btn-outline-primary btn-lg w-100">Commencer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professionnel Card -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow pricing-card position-relative">
+                        <div class="popular-badge">Le plus populaire</div>
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-center mb-4">Professionnel</h3>
+                            <div class="text-center mb-4">
+                                <span class="display-4 fw-bold">3 500</span>
+                                <span class="text-muted">Fcfa</span>
+                                <p class="text-muted">par image</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Images en 4K
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Usage commercial
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Support prioritaire
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Licence étendue
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    API d'accès
+                                </li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="/sign-in.html" class="btn btn-primary btn-lg w-100">Commencer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photographe Card -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm pricing-card">
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-center mb-4">Photographe</h3>
+                            <div class="text-center mb-4">
+                                <span class="display-4 fw-bold">70%</span>
+                                <p class="text-muted">des revenus</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Plateforme dédiée
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Statistiques détaillées
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Paiement sécurisé
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    Support personnalisé
+                                </li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="/photographer-signup.html" class="btn btn-outline-primary btn-lg w-100">Devenir photographe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mt-5">
+                <h2 class="text-center mb-5">Questions fréquentes</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="accordion" id="pricingFAQ">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        Comment fonctionne le paiement ?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#pricingFAQ">
+                                    <div class="accordion-body">
+                                        Nous acceptons les paiements par carte bancaire, PayPal et Orange Money. Les paiements sont sécurisés et instantanés.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Puis-je changer d'offre plus tard ?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                                    <div class="accordion-body">
+                                        Oui, vous pouvez changer d'offre à tout moment. La différence sera calculée au prorata.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        Quelles sont les conditions de remboursement ?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                                    <div class="accordion-body">
+                                        Nous offrons une garantie de remboursement sous 14 jours si vous n'êtes pas satisfait.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 IMAG'IN. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href="/terms.html" class="text-light me-3">Conditions d'utilisation</a>
+                        <a href="/privacy.html" class="text-light">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html> 

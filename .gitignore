@@ -2,3 +2,5 @@ _pgbackup/
 _pginfo/
 pinegrow.json
 projectdb.pgml
+.idea/
+.history/

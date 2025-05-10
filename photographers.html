@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Photographes - IMAG'IN</title>
+        <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            :root {
+                --bs-primary: #F58D2A;
+                --bs-secondary: #3384D9;
+            }
+            .btn-primary {
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+            .btn-primary:hover {
+                background-color: #e57d1a;
+                border-color: #e57d1a;
+            }
+            .text-primary {
+                color: var(--bs-primary) !important;
+            }
+            .bg-primary {
+                background-color: var(--bs-primary) !important;
+            }
+            .btn-secondary {
+                background-color: var(--bs-secondary);
+                border-color: var(--bs-secondary);
+            }
+            .btn-secondary:hover {
+                background-color: #2b73c0;
+                border-color: #2b73c0;
+            }
+            .text-secondary {
+                color: var(--bs-secondary) !important;
+            }
+            .bg-secondary {
+                background-color: var(--bs-secondary) !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img alt="IMAG'IN" width="40" src="assets/img/logo/1%20png@4x.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex mx-auto" style="width: 50%;">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Rechercher des photographes...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/explore.html">Explorer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/photographers.html">Photographes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pricing.html">Tarifs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login.html">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sign-in.html" class="btn btn-primary">S'inscrire</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="display-4 fw-bold mb-4">Devenez photographe sur IMAG'IN</h1>
+                        <p class="lead mb-4">Partagez votre talent et gagnez de l'argent en vendant vos photos. Rejoignez notre communauté de photographes professionnels.</p>
+                        <a href="/photographer-signup.html" class="btn btn-primary btn-lg">Rejoindre les photographes</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80" alt="Photographe" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container py-5">
+            <!-- Featured Photographers -->
+            <h2 class="text-center mb-5">Photographes en vedette</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                <!-- Photographer Card -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80" alt="Photographe" class="rounded-circle mb-3" width="128" height="128" style="object-fit: cover;">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="text-muted">Photographe professionnel</p>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="badge bg-primary">Nature</span>
+                                <span class="badge bg-primary">Portrait</span>
+                                <span class="badge bg-primary">Architecture</span>
+                            </div>
+                            <p class="card-text">Plus de 1000 photos vendues</p>
+                            <a href="#" class="btn btn-outline-primary">Voir le portfolio</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Photographer Card -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80" alt="Photographe" class="rounded-circle mb-3" width="128" height="128" style="object-fit: cover;">
+                            <h5 class="card-title">Jane Smith</h5>
+                            <p class="text-muted">Photographe portraitiste</p>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="badge bg-primary">Portrait</span>
+                                <span class="badge bg-primary">Mode</span>
+                                <span class="badge bg-primary">Événementiel</span>
+                            </div>
+                            <p class="card-text">Plus de 800 photos vendues</p>
+                            <a href="#" class="btn btn-outline-primary">Voir le portfolio</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Photographer Card -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80" alt="Photographe" class="rounded-circle mb-3" width="128" height="128" style="object-fit: cover;">
+                            <h5 class="card-title">Mike Johnson</h5>
+                            <p class="text-muted">Photographe paysagiste</p>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="badge bg-primary">Nature</span>
+                                <span class="badge bg-primary">Paysage</span>
+                                <span class="badge bg-primary">Voyage</span>
+                            </div>
+                            <p class="card-text">Plus de 1200 photos vendues</p>
+                            <a href="#" class="btn btn-outline-primary">Voir le portfolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <h2 class="text-center mb-5">Comment ça marche</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i class="fas fa-camera-retro fa-3x text-primary mb-3"></i>
+                        <h4>1. Créez votre compte</h4>
+                        <p>Inscrivez-vous en tant que photographe et créez votre portfolio</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i class="fas fa-upload fa-3x text-primary mb-3"></i>
+                        <h4>2. Uploadez vos photos</h4>
+                        <p>Partagez vos meilleures photos avec notre communauté</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i class="fas fa-money-bill-wave fa-3x text-primary mb-3"></i>
+                        <h4>3. Gagnez de l'argent</h4>
+                        <p>Recevez 70% des revenus sur chaque vente</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="bg-light rounded-3 p-5 mb-5">
+                <h2 class="text-center mb-4">Avantages de devenir photographe</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-primary fa-2x me-3"></i>
+                            <div>
+                                <h5>Revenus attractifs</h5>
+                                <p>Gagnez jusqu'à 70% sur chaque vente de vos photos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-chart-line text-primary fa-2x me-3"></i>
+                            <div>
+                                <h5>Statistiques détaillées</h5>
+                                <p>Suivez vos performances et vos revenus en temps réel</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-globe text-primary fa-2x me-3"></i>
+                            <div>
+                                <h5>Audience mondiale</h5>
+                                <p>Vendez vos photos à des clients du monde entier</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-shield-alt text-primary fa-2x me-3"></i>
+                            <div>
+                                <h5>Protection des droits</h5>
+                                <p>Vos photos sont protégées par des licences sécurisées</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center">
+                <h2 class="mb-4">Prêt à commencer ?</h2>
+                <p class="lead mb-4">Rejoignez notre communauté de photographes et commencez à gagner de l'argent avec vos photos</p>
+                <a href="/photographer-signup.html" class="btn btn-primary btn-lg">Devenir photographe</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 IMAG'IN. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href="/terms.html" class="text-light me-3">Conditions d'utilisation</a>
+                        <a href="/privacy.html" class="text-light">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html> 
