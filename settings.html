@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Paramètres - IMAG'IN</title>
+        <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            :root {
+                --bs-primary: #F58D2A;
+                --bs-secondary: #3384D9;
+            }
+            .btn-primary {
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+            .btn-primary:hover {
+                background-color: #e57d1a;
+                border-color: #e57d1a;
+            }
+            .text-primary {
+                color: var(--bs-primary) !important;
+            }
+            .bg-primary {
+                background-color: var(--bs-primary) !important;
+            }
+            .btn-secondary {
+                background-color: var(--bs-secondary);
+                border-color: var(--bs-secondary);
+            }
+            .btn-secondary:hover {
+                background-color: #2b73c0;
+                border-color: #2b73c0;
+            }
+            .text-secondary {
+                color: var(--bs-secondary) !important;
+            }
+            .bg-secondary {
+                background-color: var(--bs-secondary) !important;
+            }
+            .settings-nav .nav-link {
+                color: #495057;
+                padding: 0.75rem 1rem;
+                border-radius: 0.375rem;
+                margin-bottom: 0.25rem;
+            }
+            .settings-nav .nav-link:hover {
+                background-color: #f8f9fa;
+            }
+            .settings-nav .nav-link.active {
+                background-color: var(--bs-primary);
+                color: white;
+            }
+            .settings-nav .nav-link i {
+                width: 24px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img alt="IMAG'IN" width="40" src="assets/img/logo/1%20png@4x.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex mx-auto" style="width: 50%;">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Rechercher des images...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/explore.html">Explorer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/photographers.html">Photographes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pricing.html">Tarifs</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                <img src="https://ui-avatars.com/api/?name=a" alt="User" width="30" class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="/profile.html"><i class="fas fa-user me-2"></i>Mon profil</a></li>
+                                <li><a class="dropdown-item active" href="/settings.html"><i class="fas fa-cog me-2"></i>Paramètres</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/logout.html"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container py-5">
+            <h1 class="mb-4">Paramètres</h1>
+            <div class="row">
+                <!-- Settings Navigation -->
+                <div class="col-md-3 mb-4">
+                    <nav class="settings-nav">
+                        <a class="nav-link active" href="#general" data-bs-toggle="pill">
+                            <i class="fas fa-user me-2"></i>Général
+                        </a>
+                        <a class="nav-link" href="#security" data-bs-toggle="pill">
+                            <i class="fas fa-shield-alt me-2"></i>Sécurité
+                        </a>
+                        <a class="nav-link" href="#notifications" data-bs-toggle="pill">
+                            <i class="fas fa-bell me-2"></i>Notifications
+                        </a>
+                        <a class="nav-link" href="#payment" data-bs-toggle="pill">
+                            <i class="fas fa-credit-card me-2"></i>Paiement
+                        </a>
+                        <a class="nav-link" href="#privacy-settings" data-bs-toggle="pill">
+                            <i class="fas fa-eye-slash me-2"></i>Confidentialité
+                        </a>
+                        <hr>
+                        <a class="nav-link text-danger" href="#delete-account" data-bs-toggle="pill">
+                            <i class="fas fa-trash-alt me-2"></i>Supprimer le compte
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Settings Content -->
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <!-- General Settings -->
+                        <div class="tab-pane fade show active" id="general">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Informations générales</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="text-center mb-4">
+                                            <img src="https://ui-avatars.com/api/?name=a&size=96" alt="Avatar" class="rounded-circle mb-3" width="96">
+                                            <div>
+                                                <button type="button" class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-camera me-1"></i>Changer la photo
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Nom</label>
+                                                <input type="text" class="form-control" value="John">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Prénom</label>
+                                                <input type="text" class="form-control" value="Doe">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control" value="john.doe@example.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Téléphone</label>
+                                            <input type="tel" class="form-control" value="+225 07 07 07 07 07">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Type de compte</label>
+                                            <select class="form-select" disabled>
+                                                <option selected>Particulier</option>
+                                                <option>Professionnel</option>
+                                                <option>Photographe</option>
+                                            </select>
+                                            <div class="form-text">Pour changer le type de compte, contactez le support.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Langue</label>
+                                            <select class="form-select">
+                                                <option selected>Français</option>
+                                                <option>English</option>
+                                            </select>
+                                        </div>
+                                        <div class="text-end">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save me-2"></i>Enregistrer
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Settings -->
+                        <div class="tab-pane fade" id="security">
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Changer le mot de passe</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label class="form-label">Mot de passe actuel</label>
+                                            <input type="password" class="form-control" placeholder="Entrez votre mot de passe actuel">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Nouveau mot de passe</label>
+                                            <input type="password" class="form-control" placeholder="Entrez un nouveau mot de passe">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Confirmer le nouveau mot de passe</label>
+                                            <input type="password" class="form-control" placeholder="Confirmez le nouveau mot de passe">
+                                        </div>
+                                        <div class="text-end">
+                                            <button type="submit" class="btn btn-primary">Mettre à jour</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Authentification à deux facteurs</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6>Authentification par SMS</h6>
+                                            <p class="text-muted mb-0">Recevez un code par SMS à chaque connexion</p>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="sms2fa" style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6>Authentification par email</h6>
+                                            <p class="text-muted mb-0">Recevez un code par email à chaque connexion</p>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="email2fa" checked style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notifications Settings -->
+                        <div class="tab-pane fade" id="notifications">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Préférences de notification</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="mb-0">Nouvelles images</h6>
+                                            <small class="text-muted">Soyez notifié quand de nouvelles images correspondent à vos intérêts</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" checked style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="mb-0">Promotions et offres</h6>
+                                            <small class="text-muted">Recevez nos meilleures offres et promotions</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" checked style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="mb-0">Mises à jour du compte</h6>
+                                            <small class="text-muted">Informations importantes sur votre compte</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" checked style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="mb-0">Newsletter</h6>
+                                            <small class="text-muted">Recevez notre newsletter mensuelle</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">Notifications par SMS</h6>
+                                            <small class="text-muted">Recevez des alertes par SMS</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Settings -->
+                        <div class="tab-pane fade" id="payment">
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Moyens de paiement</h5>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-plus me-1"></i>Ajouter
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-between p-3 bg-light rounded mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fab fa-cc-visa fa-2x text-primary me-3"></i>
+                                            <div>
+                                                <h6 class="mb-0">Visa •••• 4532</h6>
+                                                <small class="text-muted">Expire 12/2025</small>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="badge bg-success me-2">Par défaut</span>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between p-3 bg-light rounded">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-mobile-alt fa-2x text-warning me-3"></i>
+                                            <div>
+                                                <h6 class="mb-0">Orange Money</h6>
+                                                <small class="text-muted">+225 07 •• •• •• 07</small>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-primary me-2">Par défaut</button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Historique de facturation</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Description</th>
+                                                    <th>Montant</th>
+                                                    <th>Statut</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>15/01/2024</td>
+                                                    <td>Achat image - Paysage montagne</td>
+                                                    <td>5 000 Fcfa</td>
+                                                    <td><span class="badge bg-success">Payé</span></td>
+                                                    <td><a href="#" class="text-primary"><i class="fas fa-download"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10/01/2024</td>
+                                                    <td>Achat image - Portrait studio</td>
+                                                    <td>3 500 Fcfa</td>
+                                                    <td><span class="badge bg-success">Payé</span></td>
+                                                    <td><a href="#" class="text-primary"><i class="fas fa-download"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05/01/2024</td>
+                                                    <td>Achat image - Architecture moderne</td>
+                                                    <td>5 000 Fcfa</td>
+                                                    <td><span class="badge bg-success">Payé</span></td>
+                                                    <td><a href="#" class="text-primary"><i class="fas fa-download"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Settings -->
+                        <div class="tab-pane fade" id="privacy-settings">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Paramètres de confidentialité</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="mb-0">Profil public</h6>
+                                            <small class="text-muted">Les autres utilisateurs peuvent voir votre profil</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" checked style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="mb-0">Afficher mes collections</h6>
+                                            <small class="text-muted">Vos collections sont visibles publiquement</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="mb-0">Cookies analytiques</h6>
+                                            <small class="text-muted">Aider à améliorer IMAG'IN avec des données anonymes</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" checked style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">Cookies publicitaires</h6>
+                                            <small class="text-muted">Afficher des publicités personnalisées</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" style="width: 48px; height: 24px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <a href="/privacy.html" class="text-decoration-none">Consulter la politique de confidentialité complète <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Delete Account -->
+                        <div class="tab-pane fade" id="delete-account">
+                            <div class="card border-0 shadow-sm border-danger">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0 text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Supprimer le compte</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="alert alert-danger">
+                                        <strong>Attention :</strong> La suppression de votre compte est irréversible. Toutes vos données, téléchargements et collections seront définitivement supprimés.
+                                    </div>
+                                    <p>Avant de supprimer votre compte, veuillez noter que :</p>
+                                    <ul>
+                                        <li>Vos licences d'images achetées resteront valables</li>
+                                        <li>Votre historique de paiement sera conservé conformément à la loi</li>
+                                        <li>Vos données personnelles seront supprimées sous 30 jours</li>
+                                        <li>Cette action est irréversible</li>
+                                    </ul>
+                                    <div class="mb-3">
+                                        <label class="form-label">Pour confirmer, tapez <strong>SUPPRIMER</strong></label>
+                                        <input type="text" class="form-control" placeholder="Tapez SUPPRIMER">
+                                    </div>
+                                    <button type="button" class="btn btn-danger" disabled>
+                                        <i class="fas fa-trash-alt me-2"></i>Supprimer définitivement mon compte
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 IMAG'IN. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href="/terms.html" class="text-light me-3">Conditions d'utilisation</a>
+                        <a href="/privacy.html" class="text-light">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

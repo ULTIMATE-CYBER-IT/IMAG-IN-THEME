@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Réinitialisation du mot de passe - IMAG'IN</title>
+        <title>Déconnexion - IMAG'IN</title>
         <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <style>
@@ -39,11 +39,29 @@
             .bg-secondary {
                 background-color: var(--bs-secondary) !important;
             }
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            .main-content {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .logout-card {
+                animation: fadeIn 0.5s ease;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
         </style>
     </head>
     <body>
         <!-- Header Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <img alt="IMAG'IN" width="40" src="assets/img/logo/1%20png@4x.png">
@@ -66,7 +84,7 @@
                             <a class="nav-link" href="/login.html">Connexion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-primary text-white px-3" href="/sign-in.html">S'inscrire</a>
+                            <a class="nav-link btn btn-primary text-white px-3 ms-2" href="/sign-in.html">S'inscrire</a>
                         </li>
                     </ul>
                 </div>
@@ -74,53 +92,34 @@
         </nav>
 
         <!-- Main Content -->
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body p-5">
-                            <div class="text-center mb-4">
-                                <i class="fas fa-lock fa-3x text-primary mb-3"></i>
-                                <h2 class="h3">Réinitialisation du mot de passe</h2>
-                                <p class="text-muted">Entrez votre adresse email pour recevoir un lien de réinitialisation</p>
+        <div class="main-content bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5">
+                        <div class="card border-0 shadow-sm logout-card">
+                            <div class="card-body p-5 text-center">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-sign-out-alt fa-2x text-primary"></i>
+                                </div>
+                                <h2 class="h3 mb-3">Vous êtes déconnecté</h2>
+                                <p class="text-muted mb-4">Merci d'avoir utilisé IMAG'IN. Vous avez été déconnecté avec succès de votre compte.</p>
+                                <div class="d-grid gap-2">
+                                    <a href="/login.html" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-sign-in-alt me-2"></i>Se reconnecter
+                                    </a>
+                                    <a href="/" class="btn btn-outline-secondary">
+                                        <i class="fas fa-home me-2"></i>Retour à l'accueil
+                                    </a>
+                                </div>
                             </div>
-
-                            <form>
-                                <div class="mb-4">
-                                    <label for="email" class="form-label">Adresse email</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">
-                                            <i class="fas fa-envelope"></i>
-                                        </span>
-                                        <input type="email" class="form-control" id="email" placeholder="votre@email.com" required>
-                                    </div>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary w-100 mb-3">
-                                    Envoyer le lien de réinitialisation
-                                </button>
-
-                                <div class="text-center">
-                                    <p class="mb-0">
-                                        <a href="/login.html" class="text-decoration-none">
-                                            <i class="fas fa-arrow-left me-1"></i> Retour à la connexion
-                                        </a>
-                                    </p>
-                                </div>
-                            </form>
                         </div>
-                    </div>
-
-                    <!-- Additional Information -->
-                    <div class="text-center mt-4">
-                        <p class="text-muted">
-                            Vous n'avez pas reçu l'email ? 
-                            <a href="#" class="text-decoration-none">Renvoyer le lien</a>
-                        </p>
-                        <p class="text-muted small">
-                            Si vous rencontrez des difficultés, contactez notre 
-                            <a href="#" class="text-decoration-none">support client</a>
-                        </p>
+                        <div class="text-center mt-4">
+                            <p class="text-muted small">
+                                Vous n'avez pas demandé cette déconnexion ?
+                                <a href="/login.html" class="text-decoration-none">Reconnectez-vous immédiatement</a>
+                                et changez votre mot de passe.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,4 +142,4 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
-</html> 
+</html>
